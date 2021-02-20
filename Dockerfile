@@ -2,7 +2,7 @@ FROM ubuntu:focal
 USER root
 
 # Uncomment to use local apt-cacher-ng instance. If you don't what that is, don't worry about it.
-RUN echo 'Acquire::http { Proxy "http://172.17.0.1:3142"; };' >> /etc/apt/apt.conf.d/01proxy
+# RUN echo 'Acquire::http { Proxy "http://172.17.0.1:3142"; };' >> /etc/apt/apt.conf.d/01proxy
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get -qq update && \
